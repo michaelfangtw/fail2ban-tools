@@ -1,4 +1,4 @@
-# Fail2ban-Enhanced / Fail2ban 增強工具組
+# Fail2ban-tools / Fail2ban 增強工具組
 
 A comprehensive toolkit to enhance `fail2ban` and `firewalld` operations for Linux servers. This project provides scripts for deep log analysis, daily security reporting, intelligent IP blocking (GeoIP + Attack Patterns), and visualization of banned IPs.
 這是一個用於增強 Linux 伺服器上 `fail2ban` 和 `firewalld` 運作的綜合工具組。本專案提供深度日誌分析、每日安全報告、智慧 IP 封鎖（GeoIP + 攻擊模式）以及封鎖 IP 視覺化的腳本。
