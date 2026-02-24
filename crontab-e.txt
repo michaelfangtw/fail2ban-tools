@@ -4,10 +4,10 @@
 
 # 2. 每天凌晨 1 點：分析 Log 並寄送純文字報告
 # 增加 -a "Content-Type: text/plain; charset=UTF-8" 參數
-00 05 * * * /var/www/fail2ban/daily-security-report.sh | sed 's/\x1b\[[0-9;]*m//g' | /bin/mail -s "Daily Security Report - $(date +\%Y\%m\%d)" -a "Content-Type: text/plain; charset=UTF-8" yingchih.fang@gmail.com
+00 05 * * * /var/www/fail2ban-tools/daily-security-report.sh | sed 's/\x1b\[[0-9;]*m//g' | /bin/mail -s "Daily Security Report - $(date +\%Y\%m\%d)" -a "Content-Type: text/plain; charset=UTF-8" yingchih.fang@gmail.com
 
 # 3. 每天凌晨 1 點 15 分：正式執行防火牆封鎖
-15 05 * * * /var/www/fail2ban/daily-security-report.sh --block > /dev/null 2>&1
+15 05 * * * /var/www/fail2ban-tools/daily-security-report.sh --block > /dev/null 2>&1
 
 # 4. 每天凌晨 2 點：備份報告紀錄
-20 05 * * * cp /tmp/daily_attack_report.txt /var/www/fail2ban/reports/report-$(date +\%Y\%m\%d).log
+20 05 * * * cp /tmp/daily_attack_report.txt /var/www/fail2ban-tools/reports/report-$(date +\%Y\%m\%d).log
